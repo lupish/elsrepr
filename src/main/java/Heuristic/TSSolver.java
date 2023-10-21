@@ -19,7 +19,6 @@ public class TSSolver {
 
     private static String getFileNameOUT(Parametros params, Boolean masivo) {
         String fileName = "";
-        System.out.println("tasas = "+ params.tasas);
         if (params.tasas == 1) {
             String tasas_str = String.valueOf(params.tasas_valor).replace(".", "");
             fileName += "_tasas" + tasas_str;
@@ -65,7 +64,7 @@ public class TSSolver {
         }
         System.out.println("*************************************\n");
 
-        File carpetaMasiva = new File(params.all_configs_path);
+        File carpetaMasiva = new File(params.pathArchivo);
         File[] archivos = carpetaMasiva.listFiles();
         Arrays.sort(archivos);
 
@@ -160,7 +159,8 @@ public class TSSolver {
         String [] vInicial = new String[params.nL];
         String visitaCliente = "";
         for(int i = 0; i < params.nT; i ++) {
-            if (i == 0 || i == (params.nT - params.STU - 1) || i == (params.nT - 1)) {
+            // se visita al cliente el periodo 1 y el penultimo 
+            if (i == 0 || i == (params.nT - params.STU - 1)) {
                 visitaCliente += "1";
             }
             else {
@@ -459,13 +459,13 @@ public class TSSolver {
             }
             System.out.println("*************************************\n");
 
+            params = mp.leerArchivo();
+
             if (params.tasas == 1) {
                 // sobreescribir tasas
                 params.alpha = params.tasas_valor;
                 params.beta = params.tasas_valor;
             }
-
-            params = mp.leerArchivo();
 
             if (params.version == 1) {
                 /*** TSv1 ***/
