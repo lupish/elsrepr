@@ -1,0 +1,13 @@
+Heuristic\TSExcepcion.class
+Heuristic\TabuSearch$ModoPrint.class
+Heuristic\TabuSearch.class
+Heuristic\Solucion.class
+com\vidal\elsrepr\RunHeuristic\RunParameters.class
+com\vidal\elsrepr\RunHeuristic\RunHeuristicService.class
+Heuristic\TSSolver.class
+com\vidal\elsrepr\ElsreprApplication.class
+com\vidal\elsrepr\RunHeuristic\RunHeuristicController.class
+com\vidal\elsrepr\RunHeuristic\RunResponse.class
+Data\ManejadorParametros.class
+Heuristic\Parametros.class
+Heuristic\WagnerWhitin.class
