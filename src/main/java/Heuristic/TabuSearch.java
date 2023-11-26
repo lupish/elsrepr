@@ -561,7 +561,7 @@ public class TabuSearch {
         return vecinas;
     }
 
-    public List hallarVecindario(String r) {
+    public List<String> hallarVecindario(String r) {
         List<String> vecinas = new ArrayList<String>();
         String rLimpio;
 
