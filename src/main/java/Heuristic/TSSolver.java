@@ -436,11 +436,11 @@ public class TSSolver {
         } else {
             PrintStream console = System.out;
 
-            String outFile = getFileNameOUT(params, false);
+            // String outFile = getFileNameOUT(params, false);
 
-            //LocalDateTime now = LocalDateTime.now();
-            //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-            //String outFile = "api_" + now.format(formatter) + "_" + params.nomArchivo;
+            LocalDateTime now = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+            String outFile = "api_" + now.format(formatter) + "_" + params.nomArchivo;
             output = params.pathArchivo + "OUT\\" + outFile;
             System.out.println("output = " + output);
 
